@@ -5,7 +5,7 @@ import java.net.URL;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import sun.misc.UCEncoder;
+//import sun.misc.UCEncoder;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.fxml.FXMLLoader;
