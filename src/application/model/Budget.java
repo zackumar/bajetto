@@ -16,6 +16,9 @@ public class Budget extends Income {
 	//tells us if it has been sorted by the Budget frequency;
 	public boolean sorted = false;
 	
+	//Money leftover after expenses are paid.
+	public double leftover = 0.0;
+	
 	public Budget(Income income, double scholar, double rent, double tuition, double utilities, double books) {
 		super(income.freq,income.income);
 		this.scholarships = scholar;
@@ -33,25 +36,39 @@ public class Budget extends Income {
 		}else {
 			switch(bud.freq) {
 				case MONTHLY: 
-					bud.sorted = true;
 					break;
 					
 				case WEEKLY: 
 					bud.scholarships = bud.scholarships/4;
 					bud.rent = bud.rent/4;
 					bud.utilities = bud.utilities/4;
-					bud.sorted = true;
 					break;
 					
 				case BIWEEKLY:
 					bud.scholarships = bud.scholarships/2;
 					bud.rent = bud.rent/2;
 					bud.utilities = bud.utilities/2;
-					bud.sorted = true;
 					break;
 			}
+			bud.sorted = true;
 		}
 		return;
+		
 	}
+	public void leftOverMoney(Budget bud) {
+		sortBudget(bud);
+		double leftover;
+		double realTution = bud.tuition - bud.scholarships;
+		if(realTution<0) {
+			leftover = (bud.income) - (bud.rent + bud.utilities);
+		}else {
+			leftover = (bud.income) - (bud.rent + bud.utilities + realTution);
+		}
+		bud.leftover = leftover;
+		return;
+	}
+	
+		
+		
 }
 	
