@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
-</AnchorPane>
 
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.controller.CreateBudgetController">
+   <children>
+      <AnchorPane layoutX="-6.0" layoutY="-6.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <MenuButton fx:id="menuButton" layoutX="48.0" layoutY="65.0" mnemonicParsing="false" text="MenuButton">
+              <items>
+                <MenuItem fx:id="action1" mnemonicParsing="false" onAction="#action1Clicked" text="Action 1" />
+                <MenuItem fx:id="action2" mnemonicParsing="false" text="Action 2" />
+              </items>
+            </MenuButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
