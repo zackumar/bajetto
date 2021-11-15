@@ -11,12 +11,12 @@
       <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: FFF;">
          <children>
             <AnchorPane prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #3EED00;" />
-            <Text layoutX="114.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bajetto">
+            <Text layoutX="120.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bajetto">
                <font>
                   <Font name="System Bold" size="48.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="114.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Budgeting App" wrappingWidth="169.64047241210938">
+            <Text fill="WHITE" layoutX="120.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Budgeting App" wrappingWidth="169.64047241210938">
                <font>
                   <Font size="36.0" />
                </font>
