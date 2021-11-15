@@ -16,7 +16,7 @@ public class Main extends Application {
 		try {
 			URL url = new File("src/application/view/Main.fxml").toURI().toURL();
 			AnchorPane root = (AnchorPane)FXMLLoader.load(url);
-			Scene scene = new Scene(root,400,400);
+			Scene scene = new Scene(root,800,600);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
