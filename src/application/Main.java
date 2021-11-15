@@ -15,8 +15,11 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			URL url = new File("src/application/view/Main.fxml").toURI().toURL();
+			URL cssUrl = new File("src/application/view/fonts.css").toURI().toURL();
 			AnchorPane root = (AnchorPane)FXMLLoader.load(url);
+			
 			Scene scene = new Scene(root,800,600);
+			scene.getStylesheets().add(cssUrl.toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {

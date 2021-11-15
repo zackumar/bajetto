@@ -27,6 +27,14 @@ public class CreateBudgetController {
     private Button btnCreate;
 
     @FXML
+    private Button btnBack;
+
+    @FXML
+    void back(ActionEvent event) {
+
+    }
+
+    @FXML
     void create(ActionEvent event) {
 
     }

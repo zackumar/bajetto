@@ -1,8 +1,8 @@
 @font-face {
     font-family: "Roboto";
-    src: url('Roboto-Medium.ttf');
+    src: url('../../../assets/fonts/Roboto-Medium.ttf');
 }
 
-.text {
+.root {
     -fx-font-family: "Roboto";
 }
