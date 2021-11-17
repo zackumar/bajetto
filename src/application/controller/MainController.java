@@ -34,8 +34,13 @@ public class MainController {
     }
 
     @FXML
-    void editBudget(ActionEvent event) {
-
+    void editBudget(ActionEvent event) throws IOException {
+    	URL url = new File("src/application/view/InfoView.fxml").toURI().toURL();
+    	AnchorPane mainPane = FXMLLoader.load(url);
+    	Scene scene = new Scene(mainPane);
+    	Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    	window.setScene(scene);
+    	window.show();
     }
 
 }
