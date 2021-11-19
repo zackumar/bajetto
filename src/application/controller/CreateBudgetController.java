@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 
+import application.model.BudgetHandler;
+import application.model.Income;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -50,7 +52,18 @@ public class CreateBudgetController {
 
     @FXML
     void create(ActionEvent event) {
-
+		String budname;
+		double incomeDub;
+		BudgetHandler newBud;
+    	
+    	try {
+    		budname = fieldName.getText();
+    		incomeDub = Double.parseDouble(fieldIncome.getText());
+    		Income income = new Income(incomeDub,BIWEEKLY);
+    		BudgetHandler newbud = new BudgetHandler(budname,income);
+    	} catch( Exception e){
+    		
+    	}
     }
 
     @FXML
