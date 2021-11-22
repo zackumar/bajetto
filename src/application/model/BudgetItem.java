@@ -14,5 +14,10 @@ public class BudgetItem {
 		this.freq = freq;
 	}
 	
+	public String toTsvRow() {
+		return name + "\t" + price + "\t" + freq;
+	}
+	
+	
 }
 
