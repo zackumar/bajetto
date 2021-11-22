@@ -47,7 +47,7 @@ public class BudgetHandler {
 
 	public void save() {
 		String prefix = "./";
-		String filename = prefix + this.name + ".bajetto";
+		String filename = prefix + this.name.replace(" ", "-") + ".bajetto";
 		System.out.println("Saving to " + filename);
 		
 		PrintWriter writer = null;

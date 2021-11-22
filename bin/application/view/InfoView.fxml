@@ -18,7 +18,7 @@
                         <Font size="18.0" />
                      </font>
                   </Text>
-                  <Text layoutX="252.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$-110">
+                  <Text fx:id="txtSpent" layoutX="252.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$-110">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -28,7 +28,7 @@
                         <Font size="18.0" />
                      </font>
                   </Text>
-                  <Text layoutX="38.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monthly">
+                  <Text fx:id="txtFreq" layoutX="38.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monthly">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -61,7 +61,7 @@
                   <Font size="18.0" />
                </font>
             </Text>
-            <Text layoutX="40.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$1000000000">
+            <Text fx:id="txtIncome" layoutX="40.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$1000000000">
                <font>
                   <Font size="24.0" />
                </font>

@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 
+import application.model.BudgetHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -51,6 +52,7 @@ public class CreateBudgetController {
     @FXML
     void create(ActionEvent event) {
 
+    
     }
 
     @FXML

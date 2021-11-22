@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import application.model.BudgetHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -50,6 +51,8 @@ public class MainController {
     		a.show();
     		return;
     	}
+    	
+    	BudgetHandler.getInstance().read(file.getAbsolutePath());
     	
     	System.out.println(file.getName());
     	
