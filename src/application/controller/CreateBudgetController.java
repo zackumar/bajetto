@@ -59,7 +59,6 @@ public class CreateBudgetController {
 
     @FXML
     void create(ActionEvent event) {
-    	System.out.print("We made it");
     	if(curFreq==BudgetFreq.ONETIME) {
     		return;
     	}else if(fieldIncome.getText().trim().isEmpty()||fieldName.getText().trim().isEmpty()){
