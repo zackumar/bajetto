@@ -2,7 +2,7 @@ package application.model;
 
 public class Income {
 	public enum BudgetFreq {
-		WEEKLY, BIWEEKLY, MONTHLY
+		WEEKLY, BIWEEKLY, MONTHLY, ONETIME
 	}
 	public BudgetFreq freq;
 	
@@ -12,4 +12,7 @@ public class Income {
 		this.freq = freq;
 		this.income = income;
 	}
+	
+	
+	
 }

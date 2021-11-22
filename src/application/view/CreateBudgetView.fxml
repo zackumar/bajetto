@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CreateBudgetController">
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CreateBudgetController">
    <children>
       <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #FFF;">
          <children>
@@ -30,7 +30,7 @@
                   <Font size="18.0" />
                </font>
             </Text>
-            <MenuButton layoutX="548.0" layoutY="374.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="122.0" style="-fx-background-color: #FFF; -fx-border-color: #000; -fx-border-radius: 40; -fx-line-spacing: 10;" text="Pay Period">
+            <MenuButton fx:id="menuText" layoutX="548.0" layoutY="374.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="122.0" style="-fx-background-color: #FFF; -fx-border-color: #000; -fx-border-radius: 40; -fx-line-spacing: 10;" text="Pay Period">
               <items>
                   <MenuItem fx:id="menuMonthly" mnemonicParsing="false" onAction="#setMonthly" text="Montly" />
                 <MenuItem fx:id="menuWeekly" mnemonicParsing="false" onAction="#setWeekly" text="Weekly" />
@@ -51,6 +51,7 @@
             </Button>
             <Button fx:id="btnBack" layoutX="652.0" layoutY="549.0" mnemonicParsing="false" onAction="#back" prefHeight="35.0" prefWidth="65.0" style="-fx-background-color: #FFF;" text="Go Back" textFill="RED" underline="true" />
             <Text layoutX="510.0" layoutY="571.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pressed the wrong button?" />
+            <Text fx:id="txtPayError" fill="#e80808" layoutX="536.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" " wrappingWidth="145.88818359375" />
          </children>
       </AnchorPane>
    </children>

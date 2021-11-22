@@ -19,6 +19,7 @@ public class BudgetHandler {
 	public ArrayList<BudgetItem> items = new ArrayList<BudgetItem>();
 	public Income income;
 
+	
 	public String getName() {
 		return name;
 	}
@@ -29,6 +30,11 @@ public class BudgetHandler {
 
 	public ArrayList<BudgetItem> getItems() {
 		return items;
+	}
+	
+	public void addItem(BudgetItem item) {
+		items.add(item);
+		save();
 	}
 
 	public Income getIncome() {
@@ -41,7 +47,7 @@ public class BudgetHandler {
 
 	public void save() {
 		String prefix = "./";
-		String filename = prefix + this.name + ".bajetto";
+		String filename = prefix + this.name.replace(" ", "-") + ".bajetto";
 		System.out.println("Saving to " + filename);
 		
 		PrintWriter writer = null;

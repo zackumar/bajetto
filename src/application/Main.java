@@ -2,7 +2,11 @@ package application;
 	
 import java.io.File;
 import java.net.URL;
+import java.util.ArrayList;
 
+import application.model.BudgetHandler;
+import application.model.BudgetItem;
+import application.model.Income;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -29,5 +33,20 @@ public class Main extends Application {
 	
 	public static void main(String[] args) {
 		launch(args);
+//		BudgetHandler handler = BudgetHandler.getInstance();
+//		handler.read("./Name.bajetto");
+//		System.out.println(handler.toString());
+//		
+//		ArrayList<BudgetItem> items = handler.getItems();
+//		
+//		handler.setName("Bajetto Test File");
+//		handler.income = new Income(Income.BudgetFreq.MONTHLY, 5000);
+//		
+//		items.add(new BudgetItem("Monthly", 1000, Income.BudgetFreq.MONTHLY));
+//		items.add(new BudgetItem("Test 2", 2000, Income.BudgetFreq.WEEKLY));
+//		items.add(new BudgetItem("Test 3", 3000, Income.BudgetFreq.BIWEEKLY));
+//		items.add(new BudgetItem("Test 3", 3000, Income.BudgetFreq.ONETIME));
+//		
+//		handler.save();
 	}
 }
