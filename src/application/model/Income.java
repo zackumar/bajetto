@@ -1,8 +1,8 @@
 package application.model;
 
-public abstract class Income {
+public class Income {
 	public enum BudgetFreq {
-		WEEKLY, BIWEEKLY, MONTHLY
+		WEEKLY, BIWEEKLY, MONTHLY, ONETIME
 	}
 	public BudgetFreq freq;
 	
