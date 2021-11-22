@@ -12,4 +12,7 @@ public class Income {
 		this.freq = freq;
 		this.income = income;
 	}
+	
+	
+	
 }

@@ -19,6 +19,7 @@ public class BudgetHandler {
 	public ArrayList<BudgetItem> items = new ArrayList<BudgetItem>();
 	public Income income;
 
+	
 	public String getName() {
 		return name;
 	}
@@ -29,6 +30,11 @@ public class BudgetHandler {
 
 	public ArrayList<BudgetItem> getItems() {
 		return items;
+	}
+	
+	public void addItem(BudgetItem item) {
+		items.add(item);
+		save();
 	}
 
 	public Income getIncome() {
