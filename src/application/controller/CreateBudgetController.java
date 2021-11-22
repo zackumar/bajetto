@@ -13,6 +13,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -23,6 +24,9 @@ public class CreateBudgetController {
 
     @FXML
     private MenuItem menuMonthly;
+    
+    @FXML
+    private MenuButton menuText;
 
     @FXML
     private MenuItem menuWeekly;
@@ -88,16 +92,19 @@ public class CreateBudgetController {
 
     @FXML
     void setBiWeekly(ActionEvent event) {
-    	 curFreq = BudgetFreq.BIWEEKLY;
+    	menuText.setText("Bi-Weekly");
+    	curFreq = BudgetFreq.BIWEEKLY;
     }
 
     @FXML
     void setMonthly(ActionEvent event) {
+    	menuText.setText("Monthy");
     	curFreq = BudgetFreq.MONTHLY;
     }
 
     @FXML
     void setWeekly(ActionEvent event) {
+    	menuText.setText("Weekly");
    	 	curFreq = BudgetFreq.WEEKLY;
     }
 

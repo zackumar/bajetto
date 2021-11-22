@@ -30,7 +30,7 @@
                   <Font size="18.0" />
                </font>
             </Text>
-            <MenuButton layoutX="548.0" layoutY="374.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="122.0" style="-fx-background-color: #FFF; -fx-border-color: #000; -fx-border-radius: 40; -fx-line-spacing: 10;" text="Pay Period">
+            <MenuButton fx:id="menuText" layoutX="548.0" layoutY="374.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="122.0" style="-fx-background-color: #FFF; -fx-border-color: #000; -fx-border-radius: 40; -fx-line-spacing: 10;" text="Pay Period">
               <items>
                   <MenuItem fx:id="menuMonthly" mnemonicParsing="false" onAction="#setMonthly" text="Montly" />
                 <MenuItem fx:id="menuWeekly" mnemonicParsing="false" onAction="#setWeekly" text="Weekly" />
