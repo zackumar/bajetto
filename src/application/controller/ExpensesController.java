@@ -87,6 +87,8 @@ public class ExpensesController {
 
     @FXML
     void create(ActionEvent event) throws Exception {
+    	double doubleCost;
+    	
     	if((fieldName.getText().equals("")) && (fieldCost.getText().equals(""))) {
     		errLabel.setText("Both Fields cannot be blank!");
     		throw new Exception("Both Fields cannot be blank!");
@@ -101,7 +103,7 @@ public class ExpensesController {
     	}
 		try
 		{
-		  Double.parseDouble(fieldCost.getText());
+		  doubleCost = Double.parseDouble(fieldCost.getText());
 		}
 		catch(NumberFormatException e)
 		{
@@ -110,8 +112,8 @@ public class ExpensesController {
 		}
 		
     	BudgetHandler handler = BudgetHandler.getInstance();
-    	BudgetItem newItem = new BudgetItem(null, 0, curFreq);
-    	//handler.addItem((fieldName.getText(), fieldCost.getText(), curFreq);
+    	BudgetItem newItem = new BudgetItem(fieldName.getText(), doubleCost, curFreq);
+    	handler.addItem(newItem);
     	try {
     		URL url = new File("src/application/view/InfoView.fxml").toURI().toURL();
         	AnchorPane mainPane = FXMLLoader.load(url);
