@@ -28,9 +28,6 @@ public class InfoController {
 	private Text txtSpent;
 
 	@FXML
-	private Button btnBack;
-	
-	@FXML
 	private Text txtFreq;
 
 	@FXML
@@ -128,15 +125,5 @@ public class InfoController {
 		window.show();
 
 	}
-	
-	@FXML
-    void back(ActionEvent event) throws IOException {
-    	URL url = new File("src/application/view/Main.fxml").toURI().toURL();
-    	AnchorPane mainPane = FXMLLoader.load(url);
-    	Scene scene = new Scene(mainPane);
-    	Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-    	window.setScene(scene);
-    	window.show();
-    }
 
 }
