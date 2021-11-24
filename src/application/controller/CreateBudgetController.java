@@ -76,6 +76,7 @@ public class CreateBudgetController {
     	BudgetHandler handler = BudgetHandler.getInstance();
     	handler.income= newIncome;
     	handler.name = fieldName.getText();
+    	handler.save();
     	try {
     		URL url = new File("src/application/view/InfoView.fxml").toURI().toURL();
         	AnchorPane mainPane = FXMLLoader.load(url);

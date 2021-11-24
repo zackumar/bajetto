@@ -6,6 +6,8 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javax.swing.filechooser.FileSystemView;
+
 import application.model.Income.BudgetFreq;
 
 public class BudgetHandler {
@@ -46,8 +48,11 @@ public class BudgetHandler {
 	}
 
 	public void save() {
-		String prefix = "./";
-		String filename = prefix + this.name.replace(" ", "-") + ".bajetto";
+		
+		File dir = new File(FileSystemView.getFileSystemView().getDefaultDirectory().getPath() + (System.getProperty("os.name").toLowerCase().contains("mac") ? "/Documents" : "") + "/Bajetto");
+    	if(!dir.exists())dir.mkdir();
+		
+		String filename = dir.getPath() + "/" + this.name.replace(" ", "-") + ".bajetto";
 		System.out.println("Saving to " + filename);
 		
 		PrintWriter writer = null;

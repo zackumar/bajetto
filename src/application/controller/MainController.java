@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import javax.swing.filechooser.FileSystemView;
+
 import application.model.BudgetHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,6 +17,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
+import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 
 public class MainController {
@@ -40,8 +43,16 @@ public class MainController {
     void editBudget(ActionEvent event) throws IOException {
     	Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
     	
+    	File dir = new File(FileSystemView.getFileSystemView().getDefaultDirectory().getPath() + (System.getProperty("os.name").toLowerCase().contains("mac") ? "/Documents" : "") + "/Bajetto");
+    	if(!dir.exists())dir.mkdir();
+    	
+    	System.out.println(dir.getPath());
+    			
     	FileChooser fileChooser = new FileChooser();
+    	fileChooser.setInitialDirectory(dir);
+    	fileChooser.getExtensionFilters().add(new ExtensionFilter("Bajetto File", "*.bajetto"));
     	fileChooser.setTitle("Open Budget File");
+    	System.out.println(fileChooser.getExtensionFilters());
     	File file = fileChooser.showOpenDialog(window);
     	
     	if(file == null) return;
