@@ -77,6 +77,9 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    git clone https://github.com/zackumar/bajetto.git
    ```
+   
+3. Open in eclipse and go to configure project build path to make sure the only libraries are the JavaFX SDK and JRE 1.8
+
 2. Run in eclipse
 
 <p align="right">(<a href="#top">back to top</a>)</p>
