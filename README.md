@@ -8,9 +8,9 @@
   </a>
 
   <p align="center">
-    “Budgeting App” is a desktop application that help college students budget their money in an organized fashion.
-    <br />
-    <a href="https://github.com/zackumar/bajetto"><strong>Explore the docs »</strong></a>
+  <h3>by Group 12 - Zack Umar, Brandon Hernandez, Jacob Bohrer, Joseph Dodier</h3>
+    <br/>
+    Bajetto is a desktop application that help college students budget their money in an organized fashion.
     <br />
     <br />
     <a href="https://github.com/zackumar/bajetto/issues">Report Bug</a>
