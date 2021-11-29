@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 
 import javax.swing.filechooser.FileSystemView;
 
@@ -30,6 +31,10 @@ public class MainController {
 
     @FXML
     void createBudget(ActionEvent event) throws IOException {
+    	BudgetHandler.getInstance().name = null;
+    	BudgetHandler.getInstance().income = null;
+    	BudgetHandler.getInstance().items = new ArrayList<>();
+    	
     	URL url = new File("src/application/view/CreateBudgetView.fxml").toURI().toURL();
     	AnchorPane mainPane = FXMLLoader.load(url);
     	Scene scene = new Scene(mainPane);
@@ -42,6 +47,10 @@ public class MainController {
 
     @FXML
     void editBudget(ActionEvent event) throws IOException {
+    	BudgetHandler.getInstance().name = null;
+    	BudgetHandler.getInstance().income = null;
+    	BudgetHandler.getInstance().items = new ArrayList<>();
+    	
     	Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
     	
     	File dir = new File(FileSystemView.getFileSystemView().getDefaultDirectory().getPath() + (System.getProperty("os.name").toLowerCase().contains("mac") ? "/Documents" : "") + "/Bajetto");

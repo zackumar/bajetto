@@ -24,8 +24,8 @@ public class Main extends Application {
 			
 			Scene scene = new Scene(root,800,600);
 			scene.getStylesheets().add(cssUrl.toExternalForm());
-			primaryStage.setResizable(false);
 			primaryStage.setTitle("Bajetto - The Budgeting App");
+
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {

@@ -81,10 +81,10 @@ public class InfoController {
 		txtSpent.setText(total + "");
 
 		ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList(
-				new PieChart.Data("Recurring - %" + (int) ((reccuring / handler.income.income) * 100), reccuring),
-				new PieChart.Data("One-Time - %" + (int) ((onetime / handler.income.income) * 100), onetime),
+				new PieChart.Data("Recurring: %" + (int) ((reccuring / handler.income.income) * 100), reccuring),
+				new PieChart.Data("One-Time: %" + (int) ((onetime / handler.income.income) * 100), onetime),
 				new PieChart.Data(
-						"Remaining - %" + (int) (((handler.income.income - total) / handler.income.income) * 100),
+						"Remaining: %" + (int) (((handler.income.income - total) / handler.income.income) * 100),
 						handler.income.income - total));
 
 		pieSpendings.setData(pieChartData);
