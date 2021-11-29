@@ -8,9 +8,9 @@
   </a>
 
   <p align="center">
-    “Budgeting App” is a desktop application that help college students budget their money in an organized fashion.
-    <br />
-    <a href="https://github.com/zackumar/bajetto"><strong>Explore the docs »</strong></a>
+  <h3>by Group 12 - Zack Umar, Brandon Hernandez, Jacob Bohrer, Joseph Dodier</h3>
+    <br/>
+    Bajetto is a budgeting app to help college students budget their money in an organized fashion.
     <br />
     <br />
     <a href="https://github.com/zackumar/bajetto/issues">Report Bug</a>
@@ -77,6 +77,9 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    git clone https://github.com/zackumar/bajetto.git
    ```
+   
+3. Open in eclipse and go to configure project build path to make sure the only libraries are the JavaFX SDK and JRE 1.8
+
 2. Run in eclipse
 
 <p align="right">(<a href="#top">back to top</a>)</p>
